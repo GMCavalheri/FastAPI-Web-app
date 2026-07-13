@@ -21,7 +21,7 @@ Web application build with FastAPI, HTML and CSS.
 
 The web application API has one main page:
 
-**Main (`/`)** - App main page
+**Main (`/front`)** - App front main page
 
 **Documentation (`/docs`)** - App documentation page
 
@@ -29,7 +29,7 @@ The web application API has one main page:
 
 ## Functionalities
 
-
+- Front page using HTML
 
 ---
 
@@ -44,7 +44,7 @@ The web application API has one main page:
 
 ## Technical Decisions
 
-Use the FastAPI framework on the app.py
+Use the FastAPI framework on the main.py and separated in the app folder
 
 ### FastAPI Simplicity
 
@@ -59,7 +59,7 @@ fastapi-app/
 │
 ├── app/        # Global app configurations
 │   └── main.py              # Main App
-
+|
 ├── README.md
 └── requirements.txt
 ```
@@ -108,5 +108,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --reload
 ```
+
+Access the front page in the browser: [http://127.0.0.1:8000/front](http://127.0.0.1:8000/front)
 
 Access the documentation in the browser: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
