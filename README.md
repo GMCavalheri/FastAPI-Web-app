@@ -23,12 +23,13 @@ The web application API has one main page:
 
 **Main (`/`)** - App main page
 
+**Documentation (`/docs`)** - App documentation page
+
 ---
 
 ## Functionalities
 
-- API with name and author from differents books, with a primary key (id)
-- GET, POST, PUT, DELETE functions
+
 
 ---
 
@@ -56,7 +57,9 @@ The API made in FastAPI made the use and development very fast and simple.
 ```
 fastapi-app/
 │
-├── app.py              # Main App
+├── app/        # Global app configurations
+│   └── main.py              # Main App
+
 ├── README.md
 └── requirements.txt
 ```
@@ -103,6 +106,7 @@ pip install -r requirements.txt
 ## How to run locally
 
 ```bash
-python app.py
+uvicorn app.main:app --reload
 ```
 
+Access the documentation in the browser: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
