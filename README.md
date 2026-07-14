@@ -1,4 +1,4 @@
-# Books REST API with Flask
+# Web app with FastAPI
 
 Web application build with FastAPI, HTML and CSS.
 
@@ -25,6 +25,8 @@ The web application API has one main page:
 
 **Clients (`/clients`)** - Clients API page
 
+**Client page (`/clients/<int:id>`)** - Client API page using the client's id
+
 **Documentation (`/docs`)** - App documentation page
 
 ---
@@ -32,7 +34,8 @@ The web application API has one main page:
 ## Functionalities
 
 - Front page using HTML
-- Clients API with name, telefone, email
+- Clients API with id, name, telefone, email
+- A page for each client
 
 ---
 
@@ -126,5 +129,7 @@ uvicorn app.main:app --reload
 Access the front page in the browser: [http://127.0.0.1:8000/front](http://127.0.0.1:8000/front)
 
 Access the clients page in the browser: [http://127.0.0.1:8000/clients](http://127.0.0.1:8000/clients)
+
+Access a client page using it id, in the browser: [http://127.0.0.1:8000/clients/id](http://127.0.0.1:8000/clients/id)
 
 Access the documentation in the browser: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
