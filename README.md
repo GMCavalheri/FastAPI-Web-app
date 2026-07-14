@@ -36,6 +36,7 @@ The web application API has one main page:
 - Front page using HTML
 - Clients API with id, name, telefone, email
 - A page for each client
+- A client database with sqlite
 
 ---
 
@@ -46,6 +47,7 @@ The web application API has one main page:
 | Python 3.x | Main programming language |
 | FastAPI | Framework web |
 | Uvicorn | Asynchronous Web Server |
+| SQLite  | Lightweight SQL Database |
 
 ---
 
@@ -63,6 +65,10 @@ Bridge between the app and the network and used for tests.
 
 The API made in FastAPI made the use and development very fast and simple.
 
+### SQLite
+
+Simple and lightweight SQL Database that integrates with python code
+
 ---
 
 ## Project Structure
@@ -75,6 +81,9 @@ fastapi-app/
 │   │      └── client.py
 │   ├── models
 │   │      └── client.py
+│   ├── database
+|   |      ├── client_response.py
+│   │      └── local.py
 │   └── main.py              # Main App
 |
 ├── README.md
