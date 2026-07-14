@@ -23,6 +23,8 @@ The web application API has one main page:
 
 **Main (`/front`)** - App front main page
 
+**Clients (`/clients`)** - Clients API page
+
 **Documentation (`/docs`)** - App documentation page
 
 ---
@@ -30,6 +32,7 @@ The web application API has one main page:
 ## Functionalities
 
 - Front page using HTML
+- Clients API with name, telefone, email
 
 ---
 
@@ -39,12 +42,19 @@ The web application API has one main page:
 | --- | --- |
 | Python 3.x | Main programming language |
 | FastAPI | Framework web |
+| Uvicorn | Asynchronous Web Server |
 
 ---
 
 ## Technical Decisions
 
-Use the FastAPI framework on the main.py and separated in the app folder
+### Use FastAPI best practices for big project architecture
+
+Use the FastAPI framework on the main.py and separated it in the app folder. Separate the client metadata in the models and routes folder, using POO architecture.
+
+### Uvicorn
+
+Bridge between the app and the network and used for tests.
 
 ### FastAPI Simplicity
 
@@ -58,6 +68,10 @@ The API made in FastAPI made the use and development very fast and simple.
 fastapi-app/
 │
 ├── app/        # Global app configurations
+│   ├── routes
+│   │      └── client.py
+│   ├── models
+│   │      └── client.py
 │   └── main.py              # Main App
 |
 ├── README.md
@@ -110,5 +124,7 @@ uvicorn app.main:app --reload
 ```
 
 Access the front page in the browser: [http://127.0.0.1:8000/front](http://127.0.0.1:8000/front)
+
+Access the clients page in the browser: [http://127.0.0.1:8000/clients](http://127.0.0.1:8000/clients)
 
 Access the documentation in the browser: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)

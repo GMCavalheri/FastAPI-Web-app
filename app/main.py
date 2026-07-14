@@ -1,11 +1,16 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
+from app.routes import client
+
 app = FastAPI(
    title="Techlog Solutions API",
    description="CRM for Techlog Solutions",
    version="1.0.0", 
 )
+
+app.include_router(client.router)
+
 
 @app.get("/")
 async def health_check():
