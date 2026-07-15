@@ -15,3 +15,12 @@ class ClientRepository:
                 for line in lines
             ]
             return clients
+    
+    async def obtain_client(self, client_id: int) -> Client | None:
+        with self.db.connect() as connection:
+            cursor = connection.cursor()
+            cursor.execute("SELECT id, name, email, telefone FROM clients WHERE id = ?", (client_id,))
+            line = cursor.fetchall()
+            if line:
+                return Client(id_= line[0], name=line[1], email=line[2], telefone=line[3])
+            return None

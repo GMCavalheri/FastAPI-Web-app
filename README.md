@@ -34,8 +34,8 @@ The web application API has one main page:
 ## Functionalities
 
 - Front page using HTML
-- Clients API with id, name, telefone, email
-- A page for each client
+- Clients API with id, name, telefone, email connected to the sqlite
+- A page for each client linked to the sqlite
 - A client database with sqlite
 
 ---
@@ -67,7 +67,7 @@ The API made in FastAPI made the use and development very fast and simple.
 
 ### SQLite
 
-Simple and lightweight SQL Database that integrates with python code
+Simple and lightweight SQL Database that integrates with python code.
 
 ---
 
@@ -84,10 +84,12 @@ fastapi-app/
 │   ├── database
 |   |      ├── client_response.py
 │   │      └── local.py
+│   ├── dependences.py       # FastAPI dependences
 │   └── main.py              # Main App
 |
+├── local_database.db        # Main Database
 ├── README.md
-└── requirements.txt
+└── requirements.txt         # Requirements
 ```
 
 ---
@@ -139,6 +141,6 @@ Access the front page in the browser: [http://127.0.0.1:8000/front](http://127.0
 
 Access the clients page in the browser: [http://127.0.0.1:8000/clients](http://127.0.0.1:8000/clients)
 
-Access a client page using it id, in the browser: [http://127.0.0.1:8000/clients/id](http://127.0.0.1:8000/clients/id)
+Access a client page using it's id, in the browser: [http://127.0.0.1:8000/clients/id](http://127.0.0.1:8000/clients/id)
 
 Access the documentation in the browser: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
