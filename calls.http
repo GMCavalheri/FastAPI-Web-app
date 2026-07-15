@@ -1,0 +1,27 @@
+GET http://localhost:8000/clients
+
+###
+
+POST http://localhost:8000/clients
+Content-Type: application/json
+
+{
+    "name": "Bob Good",
+    "email": "bob@good.com",
+    "telefone": "1199999999"
+}
+
+###
+
+PUT http://localhost:8000/clients/1
+Content-Type: application/json
+
+{
+    "name": "Bobson Good",
+    "email": "bob@good.com",
+    "telefone": "1199999999"
+}
+
+###
+
+DELETE  http://localhost:8000/clients/1

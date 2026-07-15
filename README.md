@@ -36,7 +36,8 @@ The web application API has one main page:
 - Front page using HTML
 - Clients API with id, name, telefone, email connected to the sqlite
 - A page for each client linked to the sqlite
-- A client database with sqlite
+- A client database with sqlite (CRUD)
+- A HTTP request test file (CRUD Test)
 
 ---
 
@@ -69,6 +70,10 @@ The API made in FastAPI made the use and development very fast and simple.
 
 Simple and lightweight SQL Database that integrates with python code.
 
+### calls.http
+
+calls.http file for testing HTTP requests: GET, POST, PUT, DELETE
+
 ---
 
 ## Project Structure
@@ -87,6 +92,7 @@ fastapi-app/
 │   ├── dependences.py       # FastAPI dependences
 │   └── main.py              # Main App
 |
+├── calls.http               # HTTP Requests Test File
 ├── local_database.db        # Main Database
 ├── README.md
 └── requirements.txt         # Requirements

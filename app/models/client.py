@@ -5,3 +5,8 @@ class Client(BaseModel):
     name: str
     email: str
     telefone: str
+
+class ClientCreateUpdate(BaseModel):
+    name: str
+    email: str
+    telefone: str

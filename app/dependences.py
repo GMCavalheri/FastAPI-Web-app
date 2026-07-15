@@ -9,5 +9,8 @@ database = LocalDatabase()
 def obtain_database() -> LocalDatabase:
     return database
 
-def obtain_repository_client(local_database: Annotated[LocalDatabase, Depends(obtain_database)]) -> ClientRepository:
+def obtain_repository_client(
+        local_database: Annotated[LocalDatabase, 
+                                  Depends(obtain_database)]
+                             ) -> ClientRepository:
     return ClientRepository(local_database)
